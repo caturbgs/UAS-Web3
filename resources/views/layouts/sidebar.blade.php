@@ -1,24 +1,17 @@
 <aside id="sidebar-wrapper">
     <div class="sidebar-brand">
-      <a href="{{'/'}}">Stisla</a>
+      <a href="{{'/'}}">SIAKAD</a>
     </div>
     <div class="sidebar-brand sidebar-brand-sm">
-      <a href="{{'/'}}">St</a>
+      <a href="{{'/'}}">SK</a>
     </div>
     <ul class="sidebar-menu">
         <li class="menu-header">Pertemuan 6 & 7</li>
         <li class="nav-item dropdown active">
           <a href="#" class="nav-link has-dropdown"><i class="fas fa-database"></i><span>CRUD Laravel</span></a>
           <ul class="dropdown-menu">
-            <li @php if(url()->current() == 'http://127.0.0.1:8000/siswa') { echo 'class="active"';} @endphp ><a class="nav-link" href="{{' /siswa ' }}">Tampil Data Siswa</a></li>
-            <li @php if(url()->current() == 'http://127.0.0.1:8000/siswa/create') { echo 'class="active"';} @endphp ><a class="nav-link" href="{{' /siswa/create ' }}">Tambah Data Siswa</a></li>
-          </ul>
-        </li>
-        <li class="menu-header">Belajar Ajax</li>
-        <li class="nav-item dropdown active">
-          <a href="#" class="nav-link has-dropdown"><i class="fa fa-book" aria-hidden="true"></i><span>CRUD Ajax</span></a>
-          <ul class="dropdown-menu">
-            <li @php if(url()->current() == 'http://127.0.0.1:8000/siswa_ajax') { echo 'class="active"';} @endphp ><a class="nav-link" href="{{' /siswa_ajax ' }}">Tampil Data Siswa</a></li>
+            {{-- <li @php if(url()->current() == 'http://127.0.0.1:8000/siswa') { echo 'class="active"';} @endphp ><a class="nav-link" href="{{' /siswa ' }}">Tampil Data Siswa</a></li>
+            <li @php if(url()->current() == 'http://127.0.0.1:8000/siswa/create') { echo 'class="active"';} @endphp ><a class="nav-link" href="{{' /siswa/create ' }}">Tambah Data Siswa</a></li> --}}
           </ul>
         </li>
     </ul>

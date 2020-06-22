@@ -6,5 +6,8 @@ use Illuminate\Http\Request;
 
 class SiswaController extends Controller
 {
-    //
+    public function index(){
+        $halaman = 'Dashboard';
+        return view('pages.index', compact('halaman'));
+    }
 }

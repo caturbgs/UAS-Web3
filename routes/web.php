@@ -16,4 +16,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('index', 'UserController@index');
+Route::get('siswa', 'SiswaController@index');
