@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Siswa;
 
 class SiswaController extends Controller
 {
     public function index(){
-        $halaman = 'Dashboard';
-        return view('pages.index', compact('halaman'));
+        $halaman = 'Data Siswa';
+        $siswa = Siswa::all();
+
+        return view('pages.siswa', compact('halaman', 'siswa'));
     }
 }

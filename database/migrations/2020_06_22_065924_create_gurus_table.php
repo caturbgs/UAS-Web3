@@ -23,7 +23,6 @@ class CreateGurusTable extends Migration
             $table->string('no_telp')->unique();
             $table->string('foto')->nullable();
             $table->string('email', 30);
-            $table->string('jabatan', 30);
             $table->timestamps();
         });
     }

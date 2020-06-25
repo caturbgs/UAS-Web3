@@ -19,6 +19,8 @@ class Siswa extends Model
         'id_kelas'
     ];
 
+    protected $dates = ['tgl_lahir', 'created_at', 'updated_at'];
+
     public function getNamaSiswaAttribute($nama_siswa){
         return ucwords($nama_siswa);
     }

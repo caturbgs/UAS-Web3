@@ -14,16 +14,10 @@ class CreateMapelsTable extends Migration
     public function up()
     {
         Schema::create('mapel', function (Blueprint $table) {
-            $table->unsignedBigInteger('id_guru')->index()->primary('id_guru');
+            $table->bigIncrements('id');
             $table->string('kd_mapel', 10)->unique();
             $table->string('nama_mapel', 30);
             $table->timestamps();
-
-            $table->foreign('id_guru')
-                  ->references('id')
-                  ->on('guru')
-                  ->onDelete('cascade')
-                  ->onUpdate('cascade');
         });
     }
 

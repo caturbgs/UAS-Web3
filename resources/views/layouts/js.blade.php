@@ -19,3 +19,10 @@
 <script src="{{ asset('assets/js/custom.js') }}"></script>
 
 <!-- Page Specific JS File -->
+
+{{-- JS Function --}}
+<script>
+    $(document).ready(function() {
+        $('#datatable').DataTable();
+    } );
+</script>

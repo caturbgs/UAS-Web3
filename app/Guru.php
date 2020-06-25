@@ -16,12 +16,18 @@ class Guru extends Model
         'alamat',
         'no_telp',
         'foto',
-        'email',
-        'jabatan'
+        'email'
     ];
+
+    protected $dates = ['tgl_lahir', 'created_at', 'updated_at'];
+
+    public function jabatan()
+    {
+        return $this->hasOne('App\Jabatan', 'id_guru');
+    }
 
     public function mapel()
     {
-        return $this->hasOne('App\Mapel', 'id_guru');
+        return $this->belongsToMany('App\Mapel', 'guru_mapel', 'id_guru', 'id_mapel');
     }
 }
