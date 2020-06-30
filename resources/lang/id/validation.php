@@ -139,7 +139,7 @@ return [
         ],
         'nama_siswa' => [
             'required' => 'Kolom Nama Siswa harus diisi',
-            'string' => 'Kolom Nama Siswa harus berupa huruf',
+            'siswa' => 'Kolom Nama Siswa harus berupa huruf',
             'max' => 'Kolom Nama Siswa tidak boleh lebih dari :max karakter',
         ],
         'tgl_lahir' => [
@@ -185,6 +185,15 @@ return [
         'email' => [
             'required' => 'Kolom Email harus diisi',
             'email' => 'Kolom Email harus alamat email yang valid',
+        ],
+        'nama_kelas' => [
+            'required' => 'Kolom Nama Kelas harus diisi',
+            'regex' => 'Kolom Nama Kelas salah format',
+            'unique' => 'Kode Nama Kelas sudah terpakai',
+        ],
+        'kd_mapel' => [
+            'regex' => 'Kolom Kode Mata Pelajaran salah format',
+            'unique' => 'Kode Mata Pelajaran sudah terpakai',
         ],
     ],
 

@@ -15,6 +15,6 @@ class Mapel extends Model
 
    public function guru()
    {
-       return $this->belongsToMany('App\Role', 'guru_mapel', 'id_mapel', 'id_guru');
+       return $this->belongsToMany('App\Guru', 'guru_mapel', 'id_mapel', 'id_guru');
    }
 }

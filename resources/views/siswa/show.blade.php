@@ -17,7 +17,7 @@
     </div>
     <div class="section-body">
         <h2 class="section-title">Tampil Data Detail Siswa</h2>
-            <table class="table table-striped">
+            <table class="table table-striped ">
                 <tr>
                     <th>Foto</th>
                     <td>

@@ -9,8 +9,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js" integrity="sha256-LJkWYMcB83+zN8VO3EnSoNYHiBo93miOF47ZfsPSNDQ=" crossorigin="anonymous"></script>
 {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script> --}}
 <script src="{{ asset('assets/js/stisla.js') }}"></script>
-{{-- <script src="{{ asset('datatables/js/jquery.dataTables.min.js') }}" defer></script> --}}
 <script src="{{ asset('datatables/datatables.min.js') }}" defer></script>
+<script src="{{ asset('select2/js/select2.js') }}"></script>
 
 <!-- JS Libraies -->
 
@@ -25,4 +25,9 @@
     $(document).ready(function() {
         $('#datatable').DataTable();
     } );
+
+    // In your Javascript (external .js resource or <script> tag)
+    $(document).ready(function() {
+        $('#select2').select2();
+    });
 </script>

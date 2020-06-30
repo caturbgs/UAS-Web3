@@ -22,7 +22,8 @@
     </div>
 
     <div class="section-body">
-        <h2 class="section-title">Tampil Data Mapel</h2>
+        <h2 class="section-title">Tampil Data Mata Pelajaran</h2>
+        <a href="mapel/create" class="btn btn-primary btn-icon icon-left mb-3"><i class="fa fa-plus" aria-hidden="true"></i> Tambah Data Mata Pelajaran</a>
         @isset($mapel)
         <table class="table text-center" id="datatable">
             <thead>
@@ -45,6 +46,11 @@
                             <div class="box-button">
                                 <a href="mapel/{{$m->id}}/edit" class="btn btn-warning btn-sm btn-icon icon-left"><i class="far fa-edit">
                                 </i> Edit</a>
+                            </div>
+                            <div class="box-button">
+                                {!! Form::open(['method' => 'DELETE', 'action' => ['MapelController@destroy', $m->id]]) !!}
+                                <button type="submit" class="btn btn-danger btn-sm btn-icon icon-left"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
+                                {!! Form::close() !!}
                             </div>
                         </td>
                     </tr>

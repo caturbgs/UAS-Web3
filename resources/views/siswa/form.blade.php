@@ -104,14 +104,15 @@
 @endif
     {!! Form::label('eskul', 'Esktrakulikuler: ', ['class' => 'control-label']) !!}
     @if (count($eskul_list) > 0)
-        @foreach ($eskul_list as $key => $value)
+        {{-- @foreach ($eskul_list as $key => $value)
             <div class="checkbox form-check">
                 <label class="form-check-label">
                     {!! Form::checkbox('eskul[]', $key, null, ['class' => 'form-check-input']) !!}
                     {{ $value }}
                 </label>
             </div>
-        @endforeach
+        @endforeach --}}
+        {!! Form::select('eskul[]', $eskul_list, null, ['class' => 'form-control', 'id' => 'select2', 'multiple' => 'multiple']) !!}
     @else
         <p>Tidak ada pilihan Esktrakulikuler.</p>
     @endif

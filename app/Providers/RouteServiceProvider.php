@@ -6,6 +6,8 @@ use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvi
 use Illuminate\Support\Facades\Route;
 use App\Siswa;
 use App\Guru;
+use App\Kelas;
+use App\Mapel;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -41,6 +43,12 @@ class RouteServiceProvider extends ServiceProvider
         });
         Route::bind('idGuru', function($guru){
             return Guru::where('id', $guru)->firstOrfail();
+        });
+        Route::bind('idKelas', function($kelas){
+            return Kelas::where('id', $kelas)->firstOrfail();
+        });
+        Route::bind('idMapel', function($mapel){
+            return Mapel::where('id', $mapel)->firstOrfail();
         });
     }
 

@@ -106,14 +106,15 @@
 @endif
     {!! Form::label('mapel', 'Mengajar Mata Pelajaran: ', ['class' => 'control-label']) !!}
     @if (count($mapel_list) > 0)
-        @foreach ($mapel_list as $key => $value)
+        {{-- @foreach ($mapel_list as $key => $value)
             <div class="checkbox form-check">
                 <label class="form-check-label">
                     {!! Form::checkbox('mapel[]', $key, null, ['class' => 'form-check-input']) !!}
                     {{ $value }}
                 </label>
             </div>
-        @endforeach
+        @endforeach --}}
+        {!! Form::select('mapel[]', $mapel_list, null, ['class' => 'form-control', 'id' => 'select2', 'multiple' => 'multiple']) !!}
     @else
         <p>Tidak ada pilihan Mengajar Mapel.</p>
     @endif

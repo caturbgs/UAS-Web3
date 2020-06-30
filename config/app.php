@@ -165,6 +165,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         App\Providers\FormSiswaServiceProvider::class,
         App\Providers\FormGuruServiceProvider::class,
+        App\Providers\FormMapelServiceProvider::class,
 
         /*
          * Package Service Providers...
