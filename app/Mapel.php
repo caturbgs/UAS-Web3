@@ -8,8 +8,6 @@ class Mapel extends Model
 {
     protected $table = 'mapel';
 
-    // protected $primaryKey = 'id_guru';
-
     protected $fillable = [
         'kd_mapel',
         'nama_mapel'

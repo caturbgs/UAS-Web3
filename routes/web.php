@@ -14,18 +14,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    return view('pages.index');
 });
+// Routes Siswa
 Route::get('siswa', 'SiswaController@index');
+Route::get('siswa/create', 'SiswaController@create');
+Route::get('siswa/{idSiswa}', 'SiswaController@show');
 Route::post('siswa', 'SiswaController@store');
-Route::get('siswa/{id}/edit', 'SiswaController@edit');
-Route::patch('siswa/{id}', 'SiswaController@update');
-Route::delete('siswa/{id}', 'SiswaController@destroy');
+Route::get('siswa/{idSiswa}/edit', 'SiswaController@edit');
+Route::patch('siswa/{idSiswa}', 'SiswaController@update');
+Route::delete('siswa/{idSiswa}', 'SiswaController@destroy');
+// Routes Guru
 Route::get('guru', 'GuruController@index');
+Route::get('guru/create', 'GuruController@create');
+Route::get('guru/{idGuru}', 'GuruController@show');
 Route::post('guru', 'GuruController@store');
-Route::get('guru/{id}/edit', 'GuruController@edit');
-Route::patch('guru/{id}', 'GuruController@update');
-Route::delete('guru/{id}', 'GuruController@destroy');
+Route::get('guru/{idGuru}/edit', 'GuruController@edit');
+Route::patch('guru/{idGuru}', 'GuruController@update');
+Route::delete('guru/{idGuru}', 'GuruController@destroy');
 
 Route::get('kelas', 'KelasController@index');
 Route::get('mapel', 'MapelController@index');

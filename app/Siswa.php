@@ -31,7 +31,7 @@ class Siswa extends Model
 
     public function eskul()
     {
-        return $this->belongsToMany('App\Eskul', 'siswa_eskul', 'id_siswa', 'id_eskul');
+        return $this->belongsToMany('App\Eskul', 'siswa_eskul', 'id_siswa', 'id_eskul')->withTimestamps();
     }
 
     public function kelas()

@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Route;
+use App\Siswa;
+use App\Guru;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -33,6 +35,13 @@ class RouteServiceProvider extends ServiceProvider
         //
 
         parent::boot();
+
+        Route::bind('idSiswa', function($siswa){
+            return Siswa::where('id', $siswa)->firstOrfail();
+        });
+        Route::bind('idGuru', function($guru){
+            return Guru::where('id', $guru)->firstOrfail();
+        });
     }
 
     /**

@@ -28,6 +28,6 @@ class Guru extends Model
 
     public function mapel()
     {
-        return $this->belongsToMany('App\Mapel', 'guru_mapel', 'id_guru', 'id_mapel');
+        return $this->belongsToMany('App\Mapel', 'guru_mapel', 'id_guru', 'id_mapel')->withTimestamps();
     }
 }

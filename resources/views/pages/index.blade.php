@@ -1,13 +1,13 @@
 @extends('master')
 
 @section('title')
-    {{ $halaman }}
+    Dasbor
 @endsection
 
 @section('content')
 <section class="section">
     <div class="section-header">
-      <h1>{{ $halaman }}</h1>
+      <h1>Dasbor</h1>
       <!-- Breadcrumb -->
       <div class="section-header-breadcrumb">
         {{-- <div class="breadcrumb-item active">{{ $halaman }}</div> --}}

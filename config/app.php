@@ -80,7 +80,8 @@ return [
     |
     */
 
-    'locale' => 'en',
+    // 'locale' => 'en',
+    'locale' => 'id',
 
     /*
     |--------------------------------------------------------------------------
@@ -162,6 +163,8 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        App\Providers\FormSiswaServiceProvider::class,
+        App\Providers\FormGuruServiceProvider::class,
 
         /*
          * Package Service Providers...

@@ -28,7 +28,7 @@
             <thead>
                 <tr>
                     <th>Nama Kelas</th>
-                    <th>Jumlah</th>
+                    <th>Jumlah Siswa</th>
                     <th>Aksi</th>
                 </tr>
             </thead>

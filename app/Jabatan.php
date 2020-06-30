@@ -8,7 +8,10 @@ class Jabatan extends Model
 {
     protected $table = 'jabatan';
 
+    protected $primaryKey = 'id_guru';
+
     protected $fillable = [
+        'id_guru',
         'nama_jabatan'
     ];
 

@@ -6,6 +6,13 @@
         <a href="{{ '/' }}">SK</a>
     </div>
     <ul class="sidebar-menu">
+        <li class="menu-header">Dashboard</li>
+        <li @php if(url()->current() == 'http://127.0.0.1:8000') { echo 'class="active"'; }
+            else{ echo ''; } @endphp >
+            <a href="{{ '/' }}"><i class="fa fa-home" aria-hidden="true"></i><span>Dasbor</span></a>
+        </li>
+    </ul>
+    <ul class="sidebar-menu">
         <li class="menu-header">Manajemen Data</li>
         <li @php if(url()->current() == 'http://127.0.0.1:8000/siswa') { echo 'class="nav-item dropdown active"'; }
             else{ echo 'class="nav-item dropdown"'; } @endphp >
