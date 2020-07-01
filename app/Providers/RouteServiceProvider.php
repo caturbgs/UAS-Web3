@@ -8,6 +8,7 @@ use App\Siswa;
 use App\Guru;
 use App\Kelas;
 use App\Mapel;
+use App\User;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -49,6 +50,9 @@ class RouteServiceProvider extends ServiceProvider
         });
         Route::bind('idMapel', function($mapel){
             return Mapel::where('id', $mapel)->firstOrfail();
+        });
+        Route::bind('idUser', function($user){
+            return User::where('id', $user)->firstOrfail();
         });
     }
 

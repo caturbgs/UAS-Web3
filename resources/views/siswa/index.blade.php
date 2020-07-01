@@ -35,7 +35,7 @@
                         <th>JK</th>
                         <th>Kelas</th>
                         <th>No. Telepon</th>
-                        <th>Aksi</th>
+                        <th class="sorting_asc_disabled sorting_desc_disabled">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -44,7 +44,13 @@
                             <td>{{ $s->nis }}</td>
                             <td>{{ $s->nama_siswa }}</td>
                             <td>{{ ($s->tgl_lahir)->format('d-m-Y') }}</td>
-                            <td>{{ $s->jk }}</td>
+                            <td>
+                                @if($s->jk == 'L')
+                                    Laki-laki
+                                @else
+                                    Perempuan
+                                @endif
+                            </td>
                             <td>{{ $s->kelas->nama_kelas }}</td>
                             <td>{{ $s->no_telp }}</td>
                             <td>

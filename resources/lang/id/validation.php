@@ -195,6 +195,14 @@ return [
             'regex' => 'Kolom Kode Mata Pelajaran salah format',
             'unique' => 'Kode Mata Pelajaran sudah terpakai',
         ],
+        'name' => [
+            'regex' => 'Kolom Nama User harus diisi',
+            'unique' => 'Kode Nama User sudah terpakai',
+        ],
+        'password' => [
+            'required' => 'Kolom Password harus diisi',
+            'confirmed' => 'Konfirmasi Password tidak cocok.',
+        ],
     ],
 
     /*

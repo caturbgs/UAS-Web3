@@ -36,7 +36,7 @@
                         <th>No. Telepon</th>
                         <th>Email</th>
                         <th>Jabatan</th>
-                        <th>Aksi</th>
+                        <th class="sorting_asc_disabled sorting_desc_disabled">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -45,7 +45,13 @@
                             <td>{{ $g->nip }}</td>
                             <td>{{ $g->nama_guru }}</td>
                             <td>{{ ($g->tgl_lahir)->format('d-m-Y') }}</td>
-                            <td>{{ $g->jk }}</td>
+                            <td>
+                                @if($g->jk == 'L')
+                                    Laki-laki
+                                @else
+                                    Perempuan
+                                @endif
+                            </td>
                             <td>{{ $g->no_telp }}</td>
                             <td> {{ $g->email }} </td>
                             <td>{{ !empty($g->jabatan->nama_jabatan) ? $g->jabatan->nama_jabatan : '-' }} </td>

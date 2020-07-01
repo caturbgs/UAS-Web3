@@ -43,13 +43,13 @@
                   <div class="form-group">
                     <div class="d-block">
                     	<label for="password" class="control-label">Password</label>
-                      <div class="float-right">
+                      {{-- <div class="float-right">
                         @if (Route::has('password.request'))
                             <a href="{{ route('password.request') }}" class="text-small">
-                            Forgot Password?
+                            Lupa Password?
                             </a>
                         @endif
-                      </div>
+                      </div> --}}
                     </div>
                     <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" tabindex="2" required autocomplete="current-password">
                     @error('password')
@@ -62,7 +62,7 @@
                   <div class="form-group">
                     <div class="custom-control custom-checkbox">
                       <input type="checkbox" name="remember" class="custom-control-input" tabindex="3" id="remember-me" {{ old('remember') ? 'checked' : '' }}>
-                      <label class="custom-control-label" for="remember-me">Remember Me</label>
+                      <label class="custom-control-label" for="remember-me">Ingat Saya</label>
                     </div>
                   </div>
 
@@ -75,7 +75,7 @@
               </div>
             </div>
             <div class="mt-5 text-muted text-center">
-              Don't have an account? <a href="{{ route('register') }}">Create One</a>
+              Tidak punya akun? <a href="{{ route('register') }}">Buat disini</a>
             </div>
             <div class="simple-footer">
                 Copyright &copy; 2020 <div class="bullet"></div> Design By <a href="https://caturbgs/">Catur Bagaskara</a>

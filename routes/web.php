@@ -45,6 +45,14 @@ Route::post('mapel', 'MapelController@store')->middleware('auth');
 Route::get('mapel/{idMapel}/edit', 'MapelController@edit')->middleware('auth');
 Route::patch('mapel/{idMapel}', 'MapelController@update')->middleware('auth');
 Route::delete('mapel/{idMapel}', 'MapelController@destroy')->middleware('auth');
+// Routes User
+Route::get('user', 'UserController@index')->middleware('auth');
+Route::get('user/create', 'UserController@create')->middleware('auth');
+Route::get('user/{idUser}', 'UserController@show')->middleware('auth');
+Route::post('user', 'UserController@store')->middleware('auth');
+Route::get('user/{idUser}/edit', 'UserController@edit')->middleware('auth');
+Route::patch('user/{idUser}', 'UserController@update')->middleware('auth');
+Route::delete('user/{idUser}', 'UserController@destroy')->middleware('auth');
 
 Auth::routes();
 

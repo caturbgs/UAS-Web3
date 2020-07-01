@@ -1,4 +1,3 @@
-{{-- 11.6.2 Langkah 3 --}}
 @extends('master')
 
 @section('title')

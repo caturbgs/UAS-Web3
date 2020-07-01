@@ -26,7 +26,7 @@
             </div>
 
             <div class="card card-success">
-              <div class="card-header"><h4 class="text-success">Register</h4></div>
+              <div class="card-header"><h4 class="text-success">Daftar</h4></div>
 
               <div class="card-body">
                 <form method="POST" action="{{ route('register') }}">
@@ -73,17 +73,21 @@
                   <div class="form-group">
                     <div class="custom-control custom-checkbox">
                       <input type="checkbox" name="agree" class="custom-control-input" id="agree" {{ old('agree') ? 'checked' : '' }}>
-                      <label class="custom-control-label" for="agree">I agree with the terms and conditions</label>
+                      <label class="custom-control-label" for="agree">Saya setuju dengan syarat dan ketentuan</label>
                     </div>
                   </div>
 
                   <div class="form-group">
                     <button type="submit" class="btn btn-success btn-lg btn-block">
-                      Register
+                      Daftar
                     </button>
                   </div>
                 </form>
               </div>
+            </div>
+
+            <div class="mt-5 text-muted text-center">
+            Sudah punya akun? <a href="{{ route('login') }}">Masuk disini</a>
             </div>
             <div class="simple-footer">
               Copyright &copy; Stisla 2018

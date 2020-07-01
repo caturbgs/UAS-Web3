@@ -17,62 +17,80 @@
     </div>
     <div class="section-body">
         <h2 class="section-title">Tampil Data Detail Siswa</h2>
-            <table class="table table-striped ">
-                <tr>
-                    <th>Foto</th>
-                    <td>
-                        @if (isset($siswa->foto))
-                            <img src="{{ asset('upload/' . $siswa->foto) }}" alt="">
-                        @else
-                            @if($siswa->jk == 'L')
-                                <img src="{{ asset('upload/dummymale.jpg') }}" alt="">
-                            @else
-                                <img src="{{ asset('upload/dummyfemale.jpg') }}" alt="">
-                            @endif
-                        @endif
-                    </td>
-                </tr>
-                <tr>
-                    <th>NIS</th>
-                    <td><strong>{{ $siswa->nis }}</strong></td>
-                </tr>
-                <tr>
-                    <th>Nama</th>
-                    <td>{{ $siswa->nama_siswa }}</td>
-                </tr>
-                <tr>
-                    <th>Tanggal Lahir</th>
-                    <td>{{ $siswa->tgl_lahir->format('d F Y') }}</td>
-                </tr>
-                <tr>
-                    <th>Jenis Kelamin</th>
-                    <td>{{ $siswa->jk }}</td>
-                </tr>
-                <tr>
-                    <th>Kelas</th>
-                    <td>{{ $siswa->kelas->nama_kelas }}</td>
-                </tr>
-                <tr>
-                    <th>Alamat</th>
-                    <td>{{ $siswa->alamat }}</td>
-                </tr>
-                <tr>
-                    <th>Nomor Telepon</th>
-                    <td>{{ $siswa->no_telp }}</td>
-                </tr>
-                <tr>
-                    <th>Estrakulikuler</th>
-                    <td>
-                        @foreach ($siswa->eskul as $eskul)
-                            @if ($eskul->nama_eskul)
-                                <span>{{ $eskul->nama_eskul }}</span><br>
-                            @else
-                                Tidak ikut Eskul.
-                            @endif
-                        @endforeach
-                    </td>
-                </tr>
-            </table>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                @if (isset($siswa->foto))
+                    <img src="{{ asset('upload/' . $siswa->foto) }}" alt="" class="img-thumbnail">
+                @else
+                    @if($siswa->jk == 'L')
+                        <img src="{{ asset('upload/dummymale.jpg') }}" alt="" class="img-thumbnail">
+                    @else
+                        <img src="{{ asset('upload/dummyfemale.jpg') }}" alt="" class="img-thumbnail">
+                    @endif
+                @endif
+            </div>
+            <div class="col-lg-9 col-md-6 col-sm-12">
+                <div class="card card-primary">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ $siswa->nama_siswa }}</h4>
+                        <h5 class="card-subtitle mb-2 text-muted">{{ $siswa->nis }}</h5>
+                        {{-- <p class="card-text">
+                            {{$siswa->tgl_lahir->format('d F Y')}}
+                        </p> --}}
+                        <div class="table-responsive-sm">
+                            <table class="table table-striped table-hover table-condensed">
+                                {{-- <tr>
+                                    <th>NIS</th>
+                                    <td><strong>{{ $siswa->nis }}</strong></td>
+                                </tr>
+                                <tr>
+                                    <th>Nama</th>
+                                    <td>{{ $siswa->nama_siswa }}</td>
+                                </tr> --}}
+                                <tr>
+                                    <th>Tanggal Lahir</th>
+                                    <td>{{ $siswa->tgl_lahir->format('d F Y') }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Jenis Kelamin</th>
+                                    <td>
+                                        @if($siswa->jk == 'L')
+                                        Laki-laki
+                                        @else
+                                            Perempuan
+                                        @endif
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Kelas</th>
+                                    <td>{{ $siswa->kelas->nama_kelas }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Alamat</th>
+                                    <td>{{ $siswa->alamat }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Nomor Telepon</th>
+                                    <td>{{ $siswa->no_telp }}</td>
+                                </tr>
+                                <tr>
+                                    <th>Estrakulikuler</th>
+                                    <td>
+                                        @foreach ($siswa->eskul as $eskul)
+                                            @if ($eskul->nama_eskul)
+                                                <span>{{ $eskul->nama_eskul }}</span><br>
+                                            @else
+                                                Tidak ikut Eskul.
+                                            @endif
+                                        @endforeach
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
   </section>

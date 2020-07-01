@@ -30,7 +30,7 @@
                 <tr>
                     <th>Nama Kelas</th>
                     <th>Jumlah Siswa</th>
-                    <th>Aksi</th>
+                    <th class="sorting_asc_disabled sorting_desc_disabled">Aksi</th>
                 </tr>
             </thead>
             <tbody>
