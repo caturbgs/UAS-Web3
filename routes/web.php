@@ -55,6 +55,14 @@ Route::post('user', 'UserController@store')->middleware('auth');
 Route::get('user/{idUser}/edit', 'UserController@edit')->middleware('auth');
 Route::patch('user/{idUser}', 'UserController@update')->middleware('auth');
 Route::delete('user/{idUser}', 'UserController@destroy')->middleware('auth');
+// Routes Eskul
+Route::get('eskul', 'EskulController@index')->middleware('auth');
+Route::get('eskul/create', 'EskulController@create')->middleware('auth');
+Route::get('eskul/{id}', 'EskulController@show')->middleware('auth');
+Route::post('eskul', 'EskulController@store')->middleware('auth');
+Route::get('eskul/{idEskul}/edit', 'EskulController@edit')->middleware('auth');
+Route::patch('eskul/{idEskul}', 'EskulController@update')->middleware('auth');
+Route::delete('eskul/{idEskul}', 'EskulController@destroy')->middleware('auth');
 
 Auth::routes();
 

@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Eskul;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Route;
 use App\Siswa;
@@ -53,6 +54,9 @@ class RouteServiceProvider extends ServiceProvider
         });
         Route::bind('idUser', function($user){
             return User::where('id', $user)->firstOrfail();
+        });
+        Route::bind('idEskul', function($eskul){
+            return Eskul::where('id', $eskul)->firstOrfail();
         });
     }
 
