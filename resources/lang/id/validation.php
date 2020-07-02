@@ -189,10 +189,10 @@ return [
         'nama_kelas' => [
             'required' => 'Kolom Nama Kelas harus diisi',
             'regex' => 'Kolom Nama Kelas salah format',
-            'unique' => 'Kode Nama Kelas sudah terpakai',
+            'unique' => 'Nama Kelas sudah terpakai',
         ],
         'kd_mapel' => [
-            'required' => 'Kolom Nama Mata Pelajaran harus diisi',
+            'required' => 'Kolom Kode Mata Pelajaran harus diisi',
             'regex' => 'Kolom Kode Mata Pelajaran salah format',
             'unique' => 'Kode Mata Pelajaran sudah terpakai',
         ],
