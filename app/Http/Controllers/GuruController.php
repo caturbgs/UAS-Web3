@@ -44,10 +44,10 @@ class GuruController extends Controller
             $this->insertJabatan($guru, $request);
         }
 
-        $guru->mapel()->attach($request->input('mapel'))->withSuccess('Data berhasil ditambah!');
+        $guru->mapel()->attach($request->input('mapel'));
 
 
-        return redirect('guru');
+        return redirect('guru')->withSuccess('Data berhasil ditambah!');
     }
 
     public function edit(Guru $guru){
