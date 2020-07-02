@@ -192,16 +192,26 @@ return [
             'unique' => 'Kode Nama Kelas sudah terpakai',
         ],
         'kd_mapel' => [
+            'required' => 'Kolom Nama Mata Pelajaran harus diisi',
             'regex' => 'Kolom Kode Mata Pelajaran salah format',
             'unique' => 'Kode Mata Pelajaran sudah terpakai',
         ],
+        'nama_mapel' => [
+            'required' => 'Kolom Nama Mata Pelajaran harus diisi',
+            'string' => 'Kolom Nama Mata Pelajaran harus berupa string',
+            'min' => 'Kolom Nama Mata Pelajaran tidak boleh kurang dari :min karakter',
+        ],
         'name' => [
-            'regex' => 'Kolom Nama User harus diisi',
-            'unique' => 'Kode Nama User sudah terpakai',
+            'required' => 'Kolom Nama User harus diisi',
+            'unique' => 'Nama User sudah terpakai',
         ],
         'password' => [
             'required' => 'Kolom Password harus diisi',
             'confirmed' => 'Konfirmasi Password tidak cocok.',
+        ],
+        'nama_eskul' => [
+            'required' => 'Kolom Nama Ekstrakulikuler harus diisi',
+            'unique' => 'Nama Ekstrakulikuler sudah terpakai',
         ],
     ],
 
