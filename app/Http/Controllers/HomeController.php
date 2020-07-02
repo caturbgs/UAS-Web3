@@ -3,8 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use App\User;
-// use Alert;
+use App\Siswa;
+use App\Guru;
+use App\Kelas;
+use App\Mapel;
+
 use RealRashid\SweetAlert\Facades\Alert;
 
 class HomeController extends Controller
@@ -26,9 +31,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // Alert::success('Sukses', 'Anda berhasil login kedalam aplikasi');
+        $user = User::all()->count();
+        $siswa = Siswa::all()->count();
+        $guru = Guru::all()->count();
+        $kelas = Kelas::all()->count();
+        $mapel = Mapel::all()->count();
 
-        return view('home');
+        return view('home', compact('user', 'siswa', 'guru', 'kelas', 'mapel'));
     }
 
     public function profile(){
