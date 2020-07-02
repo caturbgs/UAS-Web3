@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Register &mdash; Stisla</title>
+  <title>Register &mdash; UAS Pemrograman Web 3</title>
 
   <!-- General CSS Files -->
   <!-- General CSS Files -->
@@ -90,7 +90,7 @@
             Sudah punya akun? <a href="{{ route('login') }}">Masuk disini</a>
             </div>
             <div class="simple-footer">
-              Copyright &copy; Stisla 2018
+              Copyright &copy; 2020 <div class="bullet"></div> Design By <a href="https://caturbgs/">Catur Bagaskara</a>
             </div>
           </div>
         </div>

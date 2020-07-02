@@ -11,8 +11,8 @@
 <script src="{{ asset('assets/js/stisla.js') }}"></script>
 <script src="{{ asset('datatables/datatables.min.js') }}" defer></script>
 <script src="{{ asset('select2/js/select2.js') }}"></script>
-<script src="{{ asset('sweetalert2/sweetalert.js') }}"></script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+{{-- <script src="{{ asset('sweetalert2/sweetalert.js') }}"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> --}}
 {{-- @include('sweet::alert') --}}
 @include('sweetalert::alert')
 
