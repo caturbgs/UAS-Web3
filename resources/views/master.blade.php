@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="{{ asset('fontawesome/css/all.css') }}">
   <link rel="stylesheet" href="{{ asset('datatables/datatables.min.css') }}">
   <link rel="stylesheet" href="{{ asset('select2/css/select2.css') }}">
+  {{-- <link rel="stylesheet" href="{{ asset('sweetalert2/sweetalert.css') }}"> --}}
 
   <!-- CSS Libraries -->
 

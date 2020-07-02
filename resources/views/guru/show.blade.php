@@ -10,8 +10,8 @@
     <div class="section-header">
       <h1>{{ $halaman }}</h1>
       <div class="section-header-breadcrumb">
+        <div class="breadcrumb-item"><a href="/home">Dashboard</a></div>
         <div class="breadcrumb-item"><a href="/guru">Guru</a></div>
-            {{-- <div class="breadcrumb-item active">Detail guru {{ $guru->id }}</div> --}}
             <div class="breadcrumb-item active">Detail Guru</div>
       </div>
     </div>
@@ -30,7 +30,7 @@
                 @endif
             </div>
             <div class="col-lg-9 col-md-6 col-sm-12">
-                <div class="card card-primary">
+                <div class="card card-success">
                     <div class="card-body">
                         <h4 class="card-title">{{ $guru->nama_guru }}</h4>
                         <h5 class="card-subtitle mb-2 text-muted">{{ $guru->nip }}</h5>

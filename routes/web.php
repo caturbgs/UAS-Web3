@@ -12,7 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/', function () {
+    return redirect('home');
+});
 // Routes Siswa
 Route::get('siswa', 'SiswaController@index')->middleware('auth');
 Route::get('siswa/create', 'SiswaController@create')->middleware('auth');
@@ -57,3 +59,5 @@ Route::delete('user/{idUser}', 'UserController@destroy')->middleware('auth');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
+Route::get('/profile', 'HomeController@profile')->name('profile')->middleware('auth');
+Route::post('/profile', 'HomeController@update')->middleware('auth');

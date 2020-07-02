@@ -15,7 +15,8 @@
       <h1>{{ $halaman }}</h1>
       <!-- Breadcrumb -->
       <div class="section-header-breadcrumb">
-        {{-- <div class="breadcrumb-item active">{{ $halaman }}</div> --}}
+        <div class="breadcrumb-item"><a href="/home">Dashboard</a></div>
+        <div class="breadcrumb-item active">Mata Pelajaran</div>
             {{-- <div class="breadcrumb-item"><a href="#">Parent Page</a></div> --}}
             {{-- <div class="breadcrumb-item">{{ $halaman }}</div> --}}
       </div>
@@ -23,7 +24,7 @@
 
     <div class="section-body">
         <h2 class="section-title">Tampil Data Mata Pelajaran</h2>
-        <a href="mapel/create" class="btn btn-primary btn-icon icon-left mb-3"><i class="fa fa-plus" aria-hidden="true"></i> Tambah Data Mata Pelajaran</a>
+        <a href="mapel/create" class="btn btn-success btn-icon icon-left mb-3"><i class="fa fa-plus" aria-hidden="true"></i> Tambah Data Mata Pelajaran</a>
         @isset($mapel)
         <table class="table text-center" id="datatable">
             <thead>

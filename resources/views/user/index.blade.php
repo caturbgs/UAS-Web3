@@ -23,7 +23,7 @@
 
     <div class="section-body">
         <h2 class="section-title">Tampil Data User</h2>
-        <a href="user/create" class="btn btn-primary btn-icon icon-left mb-3"><i class="fa fa-plus" aria-hidden="true"></i> Tambah Data User</a>
+        <a href="user/create" class="btn btn-success btn-icon icon-left mb-3"><i class="fa fa-plus" aria-hidden="true"></i> Tambah Data User</a>
         @isset($user)
         <table class="table text-center" id="datatable">
             <thead>

@@ -37,7 +37,7 @@ class UserController extends Controller
 
         $user = User::create($input);
 
-        return redirect('user');
+        return redirect('user')->withSuccess('Data berhasil ditambah!');
     }
 
     public function edit(User $user){
@@ -57,12 +57,12 @@ class UserController extends Controller
 
         $user->update($input);
 
-        return redirect('user');
+        return redirect('user')->withSuccess('Data berhasil disunting!');
     }
 
     public function destroy(User $user){
         $user->delete();
 
-        return redirect('user');
+        return redirect('user')->withSuccess('Data berhasil dihapus!');
     }
 }

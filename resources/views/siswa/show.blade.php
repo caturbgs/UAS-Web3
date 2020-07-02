@@ -10,6 +10,7 @@
     <div class="section-header">
       <h1>{{ $halaman }}</h1>
       <div class="section-header-breadcrumb">
+        <div class="breadcrumb-item"><a href="/home">Dashboard</a></div>
         <div class="breadcrumb-item"><a href="/siswa">Siswa</a></div>
             {{-- <div class="breadcrumb-item active">Detail Siswa {{ $siswa->id }}</div> --}}
             <div class="breadcrumb-item active">Detail Siswa</div>
@@ -30,7 +31,7 @@
                 @endif
             </div>
             <div class="col-lg-9 col-md-6 col-sm-12">
-                <div class="card card-primary">
+                <div class="card card-success">
                     <div class="card-body">
                         <h4 class="card-title">{{ $siswa->nama_siswa }}</h4>
                         <h5 class="card-subtitle mb-2 text-muted">{{ $siswa->nis }}</h5>

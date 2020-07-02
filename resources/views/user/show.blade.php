@@ -22,7 +22,7 @@
     </div>
     <div class="section-body">
         <h2 class="section-title">Tampil Data User</h2>
-        <div class="card card-primary">
+        <div class="card card-success">
             <div class="card-body">
                 <h4 class="card-title">{{ $user->name }}</h4>
                 <h5 class="card-subtitle mb-2 text-muted">{{ $user->email }}</h5>

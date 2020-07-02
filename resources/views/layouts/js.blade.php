@@ -11,6 +11,10 @@
 <script src="{{ asset('assets/js/stisla.js') }}"></script>
 <script src="{{ asset('datatables/datatables.min.js') }}" defer></script>
 <script src="{{ asset('select2/js/select2.js') }}"></script>
+<script src="{{ asset('sweetalert2/sweetalert.js') }}"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+{{-- @include('sweet::alert') --}}
+@include('sweetalert::alert')
 
 <!-- JS Libraies -->
 
@@ -29,5 +33,27 @@
     // In your Javascript (external .js resource or <script> tag)
     $(document).ready(function() {
         $('#select2').select2();
+    });
+
+    $(document).on('click', '.btnHapus', function (e) {
+        e.preventDefault();
+        var id = $(this).data('id');
+        swal({
+                title: "Are you sure!",
+                type: "error",
+                confirmButtonClass: "btn-danger",
+                confirmButtonText: "Yes!",
+                showCancelButton: true,
+            },
+            function() {
+                $.ajax({
+                    type: "POST",
+                    url: "{{url('/destroy')}}",
+                    data: {id:id},
+                    success: function (data) {
+                                //
+                        }
+                });
+        });
     });
 </script>

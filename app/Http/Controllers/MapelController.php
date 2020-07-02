@@ -38,7 +38,7 @@ class MapelController extends Controller
 
         $mapel->guru()->attach($request->input('guru'));
 
-        return redirect('mapel');
+        return redirect('mapel')->withSuccess('Data berhasil ditambah!');
     }
 
     public function edit(Mapel $mapel){
@@ -59,12 +59,12 @@ class MapelController extends Controller
 
         $mapel->guru()->sync($request->input('guru'));
 
-        return redirect('mapel');
+        return redirect('mapel')->withSuccess('Data berhasil disunting!');
     }
 
     public function destroy(Mapel $mapel){
         $mapel->delete();
 
-        return redirect('mapel');
+        return redirect('mapel')->withSuccess('Data berhasil dihapus!');
     }
 }

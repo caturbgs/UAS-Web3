@@ -15,7 +15,8 @@
       <h1>{{ $halaman }}</h1>
       <!-- Breadcrumb -->
       <div class="section-header-breadcrumb">
-        {{-- <div class="breadcrumb-item active">{{ $halaman }}</div> --}}
+        <div class="breadcrumb-item"><a href="/home">Dashboard</a></div>
+        <div class="breadcrumb-item active">Siswa</div>
             {{-- <div class="breadcrumb-item"><a href="#">Parent Page</a></div> --}}
             {{-- <div class="breadcrumb-item">{{ $halaman }}</div> --}}
       </div>
@@ -23,7 +24,7 @@
 
     <div class="section-body">
         <h2 class="section-title">Tampil Data Siswa</h2>
-        <a href="siswa/create" class="btn btn-primary btn-icon icon-left mb-3"><i class="fa fa-plus" aria-hidden="true"></i> Tambah Data Siswa</a>
+        <a href="siswa/create" class="btn btn-success btn-icon icon-left mb-3"><i class="fa fa-plus" aria-hidden="true"></i> Tambah Data Siswa</a>
         @isset($siswa)
         <div class="table-responsive-sm">
             <table class="table text-center table-striped table-hover" id="datatable">
@@ -63,8 +64,10 @@
                                     </i> Edit</a>
                                 </div>
                                 <div class="box-button">
+                                    {{-- <a href="#" id="hapus_Btn" class="btn btn-danger btn-sm btn-icon icon-left"><i class="fa fa-trash">
+                                    </i> Delete</a> --}}
+
                                     {!! Form::open(['method' => 'DELETE', 'action' => ['SiswaController@destroy', $s->id]]) !!}
-                                    {{-- {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm btn-icon icon-left']) !!} --}}
                                     <button type="submit" class="btn btn-danger btn-sm btn-icon icon-left"><i class="fa fa-trash" aria-hidden="true"></i> Delete</button>
                                     {!! Form::close() !!}
                                 </div>

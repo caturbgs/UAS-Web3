@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Siswa;
 use App\Http\Requests\SiswaRequest;
 use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class SiswaController extends Controller
 {
@@ -40,7 +41,7 @@ class SiswaController extends Controller
 
         $siswa->eskul()->attach($request->input('eskul'));
 
-        return redirect('siswa');
+        return redirect('siswa')->withSuccess('Data berhasil ditambah!');
     }
 
     public function edit(Siswa $siswa){
@@ -61,14 +62,14 @@ class SiswaController extends Controller
 
         $siswa->eskul()->sync($request->input('eskul'));
 
-        return redirect('siswa');
+        return redirect('siswa')->withSuccess('Data berhasil disunting!');
     }
 
     public function destroy(Siswa $siswa){
         $this->hapusFoto($siswa);
 
         $siswa->delete();
-        return redirect('siswa');
+        return redirect('siswa')->withSuccess('Data berhasil dihapus!');
     }
 
     private function uploadFoto(SiswaRequest $request){

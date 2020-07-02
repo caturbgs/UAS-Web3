@@ -44,7 +44,7 @@ class GuruController extends Controller
             $this->insertJabatan($guru, $request);
         }
 
-        $guru->mapel()->attach($request->input('mapel'));
+        $guru->mapel()->attach($request->input('mapel'))->withSuccess('Data berhasil ditambah!');
 
 
         return redirect('guru');
@@ -74,14 +74,14 @@ class GuruController extends Controller
 
         $guru->mapel()->sync($request->input('mapel'));
 
-        return redirect('guru');
+        return redirect('guru')->withSuccess('Data berhasil disunting!');
     }
 
     public function destroy(Guru $guru){
         $this->hapusFoto($guru);
 
         $guru->delete();
-        return redirect('guru');
+        return redirect('guru')->withSuccess('Data berhasil dihapus!');
     }
 
     private function uploadFoto(GuruRequest $request){

@@ -153,7 +153,7 @@
 <div class="row">
     <span></span>
     <div class="col-8">
-        {!! Form::submit($submitButtonText, ['class' => 'btn btn-primary form-control']) !!}
+        {!! Form::submit($submitButtonText, ['class' => 'btn btn-success form-control']) !!}
     </div>
     <div class="col-4">
         <button type="reset" class="btn btn-danger form-control">Reset</button>

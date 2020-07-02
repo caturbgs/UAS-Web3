@@ -41,7 +41,7 @@ class KelasController extends Controller
 
         $kelas = Kelas::create($input);
 
-        return redirect('kelas');
+        return redirect('kelas')->withSuccess('Data berhasil ditambah!');
     }
 
     public function edit(Kelas $kelas){
@@ -58,13 +58,12 @@ class KelasController extends Controller
         ]);
 
         $kelas->update($input);
-
-        return redirect('kelas');
+        return redirect('kelas')->withSuccess('Data berhasil disunting!');
     }
 
     public function destroy(Kelas $kelas){
         $kelas->delete();
 
-        return redirect('kelas');
+        return redirect('kelas')->withSuccess('Data berhasil dihapus!');
     }
 }

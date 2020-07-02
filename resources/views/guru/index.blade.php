@@ -15,7 +15,8 @@
       <h1>{{ $halaman }}</h1>
       <!-- Breadcrumb -->
       <div class="section-header-breadcrumb">
-        {{-- <div class="breadcrumb-item active">{{ $halaman }}</div> --}}
+        <div class="breadcrumb-item"><a href="/home">Dashboard</a></div>
+        <div class="breadcrumb-item active">Guru</div>
             {{-- <div class="breadcrumb-item"><a href="#">Parent Page</a></div> --}}
             {{-- <div class="breadcrumb-item">{{ $halaman }}</div> --}}
       </div>
@@ -23,7 +24,7 @@
 
     <div class="section-body">
         <h2 class="section-title">Tampil Data guru</h2>
-        <a href="guru/create" class="btn btn-primary btn-icon icon-left mb-3"><i class="fa fa-plus" aria-hidden="true"></i> Tambah Data Guru</a>
+        <a href="guru/create" class="btn btn-success btn-icon icon-left mb-3"><i class="fa fa-plus" aria-hidden="true"></i> Tambah Data Guru</a>
         @isset($guru)
         <div class="table-responsive-sm">
             <table class="table text-center table-striped table-hover" id="datatable">
