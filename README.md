@@ -36,3 +36,6 @@ SIAKAD adalah Sistem Informasi Akademik yang dibuat untuk menunjang proses admin
 
 ### Profil User
 ![Profil User](https://github.com/caturbgs/UAS-Web3/blob/master/ss/Screenshot_2020-08-01%20Profil%20User%20%E2%80%94%20UAS%20Pemrograman%20Web%203.png)
+
+## Demo Aplikasi
+Silahkan klik [link ini](https://uasweb3.herokuapp.com) untuk coba demo aplikasi
